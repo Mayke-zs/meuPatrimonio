@@ -2,6 +2,9 @@ package br.com.senai.patrimonio;
 
 import br.com.senai.patrimonio.model.Empresa;
 import br.com.senai.patrimonio.model.Endereco;
+import br.com.senai.patrimonio.model.Funcionario;
+import br.com.senai.patrimonio.model.Sala;
+import br.com.senai.patrimonio.model.enums.Cargo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -27,6 +30,15 @@ public class PatrimonioApplication {
 
 		Endereco enderecoComArgumento = new Endereco("Rod Josephina Lodette Vassoler", "1999", "Ctg", "Santa Cruz", "Forquilhinha", "Santa Catarina");
 		System.out.println(enderecoComArgumento.getBairro());
+
+		Sala sala = new Sala();
+
+		Funcionario funcionario = new Funcionario(
+				35L,"Maykinho" , "123456789",
+				Cargo.GERENTE, empresa, sala
+		);
+
+		System.out.println(funcionario.getCpf());
 	}
 
 }

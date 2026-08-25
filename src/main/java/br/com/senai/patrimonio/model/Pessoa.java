@@ -6,7 +6,7 @@ public class Pessoa {
     private String cpf;
 
 
-    public Pessoa(long id, String nome, String cpf){
+    public Pessoa(Long id, String nome, String cpf){
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
