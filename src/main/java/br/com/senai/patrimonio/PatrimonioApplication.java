@@ -1,5 +1,10 @@
 package br.com.senai.patrimonio;
 
+import br.com.senai.patrimonio.avaliacao.Curso;
+import br.com.senai.patrimonio.avaliacao.Evento;
+import br.com.senai.patrimonio.avaliacao.Participante;
+import br.com.senai.patrimonio.avaliacao.enums.Nivel;
+import br.com.senai.patrimonio.avaliacao.enums.StatusEvento;
 import br.com.senai.patrimonio.model.Empresa;
 import br.com.senai.patrimonio.model.Endereco;
 import br.com.senai.patrimonio.model.Funcionario;
@@ -34,11 +39,32 @@ public class PatrimonioApplication {
 		Sala sala = new Sala();
 
 		Funcionario funcionario = new Funcionario(
-				35L,"Maykinho" , "123456789",
+				35L, "Maykinho", "123456789",
 				Cargo.GERENTE, empresa, sala
 		);
 
 		System.out.println(funcionario.getCpf());
-	}
 
+		Participante participante = new Participante(
+				"Mayke2",
+				"maykebolinha@gmail.com",
+				"999999999",
+				"1",
+				Nivel.INTERMEDIARIO
+		);
+		System.out.println(participante.getNome());
+
+		Evento evento = new Evento(
+				1,
+				"Meu evento",
+				"Senai",
+				StatusEvento.EVENTOEMANDAMENTO,
+				participante
+		);
+		System.out.println(evento.getNome());
+
+		Curso curso = new Curso(
+
+		);
+	}
 }
